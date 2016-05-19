@@ -3,11 +3,16 @@ package com.zhou.kafka.consumer;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 
+/**
+ * 多线程处理消息
+ * @author zhoudong
+ *
+ */
 public class ConsumerMsgTask implements Runnable {
-	private KafkaStream m_stream;
+	private KafkaStream<byte[], byte[]> m_stream;
     private int m_threadNumber;
 
-    public ConsumerMsgTask(KafkaStream stream, int threadNumber) {
+    public ConsumerMsgTask(KafkaStream<byte[], byte[]> stream, int threadNumber) {
         m_threadNumber = threadNumber;
         m_stream = stream;
     }
