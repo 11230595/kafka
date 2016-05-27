@@ -154,5 +154,26 @@
             <scope>test</scope>
         </dependency>
 		<!-- kafka end -->
-	</dependencies>	
+		<dependency>
+		  <groupId>com.zhou</groupId>
+		  <artifactId>core</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	
+	<!-- nexus-releases nexus-snapshots与settings.xml中server下的id对应 --> 
+	<distributionManagement> 
+	    <repository> 
+	        <id>nexus-releases</id> 
+	        <name>Nexus Releases Repository</name> 
+	        <url>http://10.0.201.196:8081/nexus/content/repositories/releases/</url> 
+	    </repository> 
+	    <snapshotRepository> 
+	        <id>nexus-snapshots</id> 
+	        <name>Nexus Snapshots Repository</name> 
+	        <url>http://10.0.201.196:8081/nexus/content/repositories/snapshots/</url> 
+	    </snapshotRepository> 
+	</distributionManagement> 	
 </project>
+
+
